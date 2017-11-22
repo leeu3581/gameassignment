@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Object
+comment0.text=\n\ This\ is\ the\ objects\ class\ and\ allows\ the\ player\ to\ carry\ objects\n\n\ @sofialee\n\ @22/11/17\n
+comment1.params=description\ currentRoom\ weight
+comment1.target=Object(java.lang.String,\ Room,\ int)
+comment1.text=\n\ Creates\ an\ object\ with\ description\ similar\ to\ the\ Room\ class\n
+comment2.params=
+comment2.target=java.lang.String\ getShortDescription()
+comment2.text=\n\ @return\ The\ short\ description\ of\ the\ object\n\ (the\ one\ that\ was\ defined\ in\ the\ constructor).\n
+comment3.params=
+comment3.target=java.lang.String\ getLongDescription()
+comment3.text=\n\ Return\ a\ description\ of\ the\ room\ in\ the\ form\:\n\ \ \ \ \ You\ are\ in\ the\ kitchen.\n\ \ \ \ \ //Exits\:\ north\ west\n\ @return\ A\ long\ description\ of\ this\ room\n
+comment4.params=
+comment4.target=int\ getWeight()
+comment5.params=
+comment5.target=Room\ getRoom()
+comment6.params=carried
+comment6.target=void\ carryObject(boolean)
+numComments=7
