@@ -61,6 +61,13 @@ public class Room
     {
         return "You are " + description + ".\n" + getExitString();
     }
+    
+    /**
+     * Return desc of item being carried by character
+     */
+    public String getCharacterDesc(){
+        return "This character is" + description + "\n" + getItemString();
+    }
 
     /**
      * Return a string describing the room's exits, for example
@@ -76,7 +83,20 @@ public class Room
         }
         return returnString;
     }
-
+    
+    /**
+     * Similar to getExitString, get the items being carried by character
+     */
+    private String getItemString()
+    {
+        String returnString = "Carrying:";
+        Set<String> keys = exits.keySet();
+        for(String exit : keys) {
+            returnString += " " + exit;
+        }
+        return returnString;
+    }
+    
     /**
      * Return the room that is reached if we go from this room in direction
      * "direction". If there is no room in that direction, return null.

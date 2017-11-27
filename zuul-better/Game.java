@@ -19,9 +19,9 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
+    private Room main;
     private boolean haswon;
     private boolean finished;
-    private Player player;
         
     /**
      * Create the game and initialise its internal map.
@@ -31,7 +31,7 @@ public class Game
         createRooms();
         parser = new Parser();
         haswon = false;
-        player = new Player();
+        
     }
 
     /**
@@ -75,25 +75,20 @@ public class Game
         bush.setExit("north", lab);
 
         currentRoom = outside;  // start game outside
+        
+        Room wizard;
+        //testing how players would be created using Room class
+        main = new Room(" you, the main character with no name and who is a student.");
+        wizard = new Room(" the mysterious floating wizard");
+        
+        
+        
+        main.setExit(" an empty backpack ", currentRoom);
+        wizard.setExit(" world peace", pub);
+        
+
     }
     
-    
-    /**
-     * Initializes the objects and the objects weights. 
-     * The objects also start inside a particular room.
-     */
-    private void createObjects()
-    {
-        Object key;
-        
-        //create new objects
-        key = new Object("an old and rusty bronze key");
-        
-        //initialize objects weights
-        key.setWeight(key, 2);
-    
-        
-    }
     
     /**
      *  Main play routine.  Loops until end of play.
@@ -124,6 +119,7 @@ public class Game
         System.out.println("Type 'help' if you need help.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
+        System.out.println(main.getCharacterDesc());
     }
 
     /**
